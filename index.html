@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>1970 Dodge Challenger Visualizer - Full Version</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="viewer-container">
+      <div id="loading">Loading Challenger...</div>
+      <!-- View-specific info panel -->
+      <div id="view-info" class="view-info">
+        <div id="view-title">Front End</div>
+        <div id="view-details">R/T Dual Scoop Grille • Chrome Bumper • Shaker Hood</div>
+      </div>
+    </div>
+
+    <div id="ui-panel">
+      <h1>🔥 3D Car Visualizer</h1>
+
+      <!-- Car Model Selector - YOUR GLB -->
+      <div class="control-group">
+        <label for="car-select">Car Model</label>
+        <select id="car-select">
+          <option value="assets/car.glb" selected>DODGE Challenger</option>
+          <option value="assets/bmw.glb" selected>BMW</option>
+          <option value="assets/ferrari.glb" selected>FERRARI</option>
+        </select>
+      </div>
+
+      <!-- Camera Views with Dynamic Details -->
+      <div class="control-group">
+        <label>Views</label>
+        <div class="button-group">
+          <button id="cam-front" class="active">Front</button>
+          <button id="cam-rear">Rear</button>
+          <button id="cam-side">Side</button>
+          <button id="cam-top">Top</button>
+          <button id="cam-orbit">360°</button>
+        </div>
+      </div>
+
+      <!-- Muscle Car Features -->
+      <div class="control-group">
+        <label>Doors</label>
+        <div class="button-group">
+          <button id="doors-open">Open</button>
+          <button id="doors-close" class="active">Close</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Hood</label>
+        <div class="button-group">
+          <button id="hood-open">Open</button>
+          <button id="hood-close" class="active">Close</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Trunk</label>
+        <div class="button-group">
+          <button id="trunk-open">Open</button>
+          <button id="trunk-close" class="active">Close</button>
+        </div>
+      </div>
+
+      <!-- Customization -->
+      <div class="control-group">
+        <label for="color">Paint</label>
+        <input type="color" id="color" value="#ff6600" />
+      </div>
+
+      <div class="control-group">
+        <label for="wheel-select">Rims</label>
+        <select id="wheel-select">
+          <option value="stock">Stock 14"</option>
+          <option value="mag">Mag Wheels</option>
+          <option value="torq">Torq Thrust</option>
+          <option value="crager">Crager SS</option>
+        </select>
+      </div>
+
+      <!-- Environment -->
+      <div class="control-group">
+        <label for="env-select">Setting</label>
+        <select id="env-select">
+          <option value="studio">Studio</option>
+          <option value="garage">Garage</option>
+          <option value="sunset">Sunset</option>
+        </select>
+      </div>
+
+      <!-- Engine -->
+      <div class="control-group">
+        <button id="engine-sound">🔊 Engine OFF</button>
+      </div>
+
+      <!-- Status -->
+      <div id="status-bar" class="status-bar">
+        Ready • FPS: -- • Model: YOUR Challenger
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
